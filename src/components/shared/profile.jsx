@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import InputField from "../../components/common/inputFields";
+import Input from "../reusable/Input";
 import Text from "../common/text";
 import Button from "../common/button";
 import ProfileDataFields from "./fieldsData./profileDataFields";
@@ -26,8 +26,7 @@ const profile = () => {
 
   const validate = (values) => {
     const errors = {};
-    console.log("This is working");
-    console.log(values);
+ 
     if (!values.firstName) {
       errors.firstName = "Enter a valid email address.";
     }

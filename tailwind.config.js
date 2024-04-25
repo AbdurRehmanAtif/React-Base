@@ -11,11 +11,16 @@ module.exports = {
         'spin-slow': 'spin 3s linear infinite',
       },
       colors: {
-        customBlue: '#0f1729',
-        customGreen: '#00ff00',
-        headingGreen: '#0ca34d',
-        powderBlue: "#B6D0E2"
-      }
+        backgroundColor: "#faf5ff",
+        HoverText: "#f3e8ff",
+        textDark: '#0705ef'
+
+      },
+      fontFamily: {
+        'fresh-sans-regular': ['./src/fonts/FreshSansRegular.ttf', 'fresh-sans-regular'], // Adjust the path as per your folder structure
+        'fresh-sans-medium': ['./src/fonts/FreshSansMedium.ttf', 'fresh-sans-medium'], // Adjust the path as per your folder structure
+
+      },
     },
   },
   plugins: [

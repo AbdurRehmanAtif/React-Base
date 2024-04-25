@@ -1,11 +1,26 @@
-@tailwind base; 
-@tailwind components; 
-@tailwind utilities; 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-textarea:focus, input:focus{
-    outline: none;
+
+@layer base {
+    @font-face {
+        font-family: 'fresh-sans-medium';
+        font-style: medium;
+        src: url(../src/fonts/FreshSansMedium.ttf) format('woff2');
+    }
+
+    @font-face {
+        font-family: 'fresh-sans-regular';
+        font-style: normal;
+        src: url(../src/fonts/FreshSansRegular.ttf) format('woff2');
+    }
 }
 
-h1{
-    font-family: "Montserrat", Arial, sans-serif !important;
-}
+/* .menu-open {
+    overflow: hidden;
+}  */
+
+/* .body {
+    overflow-y:unset;
+} */
