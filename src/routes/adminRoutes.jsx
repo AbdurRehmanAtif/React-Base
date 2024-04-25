@@ -5,9 +5,11 @@ import Dashboard from "../components/admin/dashboard";
 
 const AdminRoutes = () => {
   return (
-    <Route path="" element={<AdminLayout />}>
-      <Route path="" element={<Dashboard />} />
-    </Route>
+    <Routes>
+      <Route path="" element={<AdminLayout />}>
+        <Route path="" element={<Dashboard />} />
+      </Route>
+    </Routes>
   );
 };
 

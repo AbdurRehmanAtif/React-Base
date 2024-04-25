@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Sidebar from "./sidebar";
-import Header from "./header";
+// import Sidebar from "./sidebar";
+// import Header from "./header";
 
 const adminLayout = () => {
   const styling = {
@@ -11,9 +11,9 @@ const adminLayout = () => {
   return (
     <>
       <main className="App">
-        <Sidebar />
+        {/* <Sidebar />
         <Header styling={styling} />
-        <Outlet />
+        <Outlet /> */}
         
       </main>
     </>

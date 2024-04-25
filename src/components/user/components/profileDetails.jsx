@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import InputField from "../../common/inputFields";
+import InputField from "../../reusable/Input";
 import Text from "../../common/text";
 import Button from "../../common/button";
 import ApiService from "../../../services/apiService";
 import Loading from "../../common/loading";
-import { useAuth } from "../../../context/authProvider.jsx";
-import UserService from "../../../services/userService.js";
+import { useAuth } from "../../../context/authProvider";
+
 
 const ProfileDetails = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,7 +28,7 @@ const ProfileDetails = () => {
           authObject.getToken()
         );
         if (results.statusCode == "200") {
-          const data = UserService.parseData(fields, results.data);
+          // const data = UserService.parseData(fields, results.data);
           setProfileData(data);
         }
 

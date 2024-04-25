@@ -6,7 +6,9 @@ import ApiService from "../../services/apiService";
 import AuthService from "../../services/authService";
 import { useNavigate } from "react-router-dom";
 import Loading from "../common/loading";
+
 const loginForm = () => {
+  
   const navigate = useNavigate();
   // const location = useLocation();
   // const from = location.state?.from?.pathname || "/";
@@ -117,6 +119,7 @@ const loginForm = () => {
             validate={validate}
           >
             {({ isSubmitting }) => (
+              
               <Form className="space-y-6">
                 <div>
                   <label
@@ -149,7 +152,7 @@ const loginForm = () => {
                     </label>
                     <div className="text-sm">
                       <a
-                        href="#"
+                        href="/forgotPassword"
                         className="block text-l font-bold text-indigo-600 hover:text-indigo-500"
                       >
                         Forgot password?
@@ -202,7 +205,7 @@ const loginForm = () => {
 
           <p className="mt-10 text-center text-sm text-gray-500">
             <a
-              href="#"
+              href="/register"
               className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
             >
               Create a myApp account{" "}

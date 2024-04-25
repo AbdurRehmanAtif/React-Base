@@ -56,35 +56,35 @@ const resgisterForm = () => {
     // Add your custom validation logic here
     const errors = {};
 
-    // if (!values.username) {
-    //   errors.username = "Enter a username.";
-    // }
-    // if (!values.email) {
-    //   errors.email = "Enter a valid email address.";
-    // } else {
-    //   // Validate email address, mobile number, or myGov username
-    //   const isValidEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
-    //     values.email
-    //   );
-    //   // const isValidMobileNumber = /^\d{10}$/i.test(values.username);
-    //   // const isValidMyGovUsername = /^[A-Za-z]{2}\d{6}$/.test(values.username);
-    //   if (!isValidEmail) {
-    //     errors.email = "Enter a valid email address";
-    //   }
-    // }
-    // // Assuming values and errors are objects with the password and confirmPassword properties
-    // if (values.password === values.confirmPassword) {
-    //   // Passwords match, no error
-    // } else {
-    //   errors.confirmPassword = "Password doesn't match.";
-    // }
+    if (!values.username) {
+      errors.username = "Enter a username.";
+    }
+    if (!values.email) {
+      errors.email = "Enter a valid email address.";
+    } else {
+      // Validate email address, mobile number, or myGov username
+      const isValidEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
+        values.email
+      );
+      // const isValidMobileNumber = /^\d{10}$/i.test(values.username);
+      // const isValidMyGovUsername = /^[A-Za-z]{2}\d{6}$/.test(values.username);
+      if (!isValidEmail) {
+        errors.email = "Enter a valid email address";
+      }
+    }
+    // Assuming values and errors are objects with the password and confirmPassword properties
+    if (values.password === values.confirmPassword) {
+      // Passwords match, no error
+    } else {
+      errors.confirmPassword = "Password doesn't match.";
+    }
 
-    // if (!values.password) {
-    //   errors.password = "Enter a password.";
-    // }
-    // if (!values.confirmPassword) {
-    //   errors.confirmPassword = "Please confirm password.";
-    // }
+    if (!values.password) {
+      errors.password = "Enter a password.";
+    }
+    if (!values.confirmPassword) {
+      errors.confirmPassword = "Please confirm password.";
+    }
 
     return errors;
   };
@@ -252,7 +252,7 @@ const resgisterForm = () => {
           <p className="mt-10 text-center text-sm text-gray-500">
             Already have an account?{" "}
             <a
-              href="#"
+              href="/login"
               className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
             >
               Login
